@@ -1,0 +1,12 @@
+#https://github.com/manisankarmani/ansible
+---
+ - hosts: all
+   remote_user: root
+   tasks:
+     - name: "Check Internet"
+       uri:
+         url: https://www.rediff.com
+         return_content: yes
+         register: webpage
+
+         
